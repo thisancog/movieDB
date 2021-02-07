@@ -21,7 +21,7 @@ All video files should be named based on the pattern Title_Director_Year, e.g. *
 The script will recognise all common video file formats.
 
 As I was too lazy to offer a way to customise this, you will have to dig into the code to change these prerequisites yourself:
-* Variable `searchDir` of `generateCatalogue.py`on line 26 contains the name of the sub-directory your video files are placed in.
+* Variable `searchDir` on line 26 of `generateCatalogue.py` contains the name of the sub-directory your video files are placed in.
 * The pattern file name pattern comes into play in the `parseFileData` function on line 145 of `generateCatalogue.py`. Change this function, if you need.
 * You can find a list of all accepted video file extensions on line 25 of `generateCatalogue.py`, if you like to make any changes.
 
@@ -43,3 +43,5 @@ If a video file can not be matched with IMDb data, make sure that you spelled it
 If you choose a movie title other than the original title (capitalisation sensitive), e.g. the title of a local release, it will probably also be found on IMDb. The catalogue will then display both the original title and the one that you chose.
 
 In order to avoid CORS errors in local environments, a complete copy of the data in `catalogue.json` is going to be written into `index.html`. This adds unnecessary redundancy, but you can change this behaviour on line 422 of `generateCatalogue.py`, making the .html file leaner. In that event, the JavaScript will fetch all information from the .json file.
+
+The catalogue looks crap on mobile phones. I'm aware. Maybe, maybe, I'll fix that later.
