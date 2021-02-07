@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<title>Catalogue</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<link rel="stylesheet" href="html/style.css" type="text/css" media="all" />
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="header">
+		<h1 class="page-title">Movie catalogue</h1>
+		<div class="header-actions">
+			<div class="header-filter">
+				<label for="sortby">Sort by</label>
+				<select id="sortby">
+					<option value="country">Country</option>
+					<option value="director">Director</option>
+					<option value="rating">Rating</option>
+					<option value="resolution">Resolution</option>
+					<option value="title" selected>Title</option>
+					<option value="year">Year of release</option>
+				</select>
+			</div>
+			<div class="header-filter">
+				<label for="order">Order</label>
+				<select id="order">
+					<option value="ASC" selected>↑</option>
+					<option value="DESC">↓</option>
+					
+				</select>
+			</div>
+			<div class="header-filter">
+				<input type="text" id="search" placeholder="Search&hellip;" />
+			</div>
+			<div class="header-filter">
+				<input type="button" id="random" value="Random" />
+			</div>
+			<div class="header-filter">
+				<input type="button" id="all" value="All" />
+			</div>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="movies-filtered-amount"></div>
+		<div class="movies">Preparing data&hellip;</div>
+	</div>
+
+	<div class="footer">
+		<div class="movie-count"></div>
+		<div class="movie-statistics"></div>
+		<div class="last-updated">Last updated: DATE</div>
+	</div>
+</div>
+
+<script type="text/javascript">var data = CATALOGUE;</script>
+<script src="html/script.js" type="text/javascript" async></script>
+</body>
+</html>
