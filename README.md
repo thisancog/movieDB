@@ -10,7 +10,7 @@ This tool scans a given directory for any video files, extracts information abou
 
 As is, the tool runs from the command line. You'll need:
 
-* [Python](https://www.python.org/download/releases/3.0/) version 3.x (already installed on computers)
+* [Python](https://www.python.org/download/releases/3.0/) version 3.x (already installed on many computers)
 * [ffmpeg](https://ffmpeg.org/) (often already installed, but you should update it)
 * [IMDbPY](https://imdbpy.github.io/)
 
