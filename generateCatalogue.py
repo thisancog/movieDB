@@ -27,6 +27,7 @@ searchDir = 'Filme'
 jsonFileName = 'catalogue.json'
 start = 0
 amount = -1
+embedCatalogueInHTML = False
 
 
 ########### External documentation ###########
@@ -419,7 +420,10 @@ def writeHTML(files):
 	s = f.read()
 	now = datetime.now()
 	s = s.replace('DATE', now.strftime("%d.%m.%Y %H:%M:%S"))
-	s = s.replace('CATALOGUE', json.dumps(files))
+	if embedCatalogueInHTML:
+		s = s.replace('CATALOGUE', json.dumps(files))
+	else:
+		s = s.replace('CATALOGUE', '""')
 	writeFile('index.html', s)
 
 
